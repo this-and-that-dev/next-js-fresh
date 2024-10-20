@@ -13,6 +13,8 @@ export default function Cart() {
             <CartItem cartList={cartList}/>
             <Banner name="롯데"/>
             <Banner name="현대"/>
+            <Button colorName="red"/>
+            <Button colorName="blue"/>
         </div>
     )
 }
@@ -20,6 +22,12 @@ export default function Cart() {
 function Banner(props) {
     return (
         <h5>{props.name}카드 결제 행사중</h5>
+    )
+}
+
+function Button(props) {
+    return (
+        <button style={{background : props.colorName}}>{props.colorName}버튼</button>
     )
 }
 
